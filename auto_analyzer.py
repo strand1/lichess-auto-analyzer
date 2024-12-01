@@ -146,7 +146,7 @@ def analyze_game(game, engine_path, annotated_file, is_batch=False):
 
 
 def main():
-    username = input("Enter Lichess user: ").strip() or 'dstrand17'
+    username = input("Enter Lichess user: ").strip() or '' # add your username here if you want
     games_file = f'games/{username}_all_games.pgn'
     annotated_file = f'{username}_annotated.pgn'
     engine_path = "/home/dstrand/workspace/chess/stockfish/stockfish-ubuntu-x86-64"
