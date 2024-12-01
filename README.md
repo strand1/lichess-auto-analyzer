@@ -24,13 +24,11 @@ This script is designed to download and analyze chess games from [Lichess](https
    - Select recent games to analyze from the list provided.
    - Or, choose batch analysis if you'd like to annotate multiple games at once.
    - Also, you can check for any newly played games and add them to your local collection.
+   - View the annotated files in your local `annotated` directory to see game insights
 3. **Annotations**: The script uses Stockfish and the annotator tool to evaluate and comment on the games, saving the annotated `.pgn` files locally for review.
 
-### Example Workflow:
-- Enter your Lichess username to begin.
-- Download all games or simply the recent 10 games.
-- Analyze a selected game or let the script auto-analyze multiple games for you.
-- View the annotated files in your local `annotated` directory to see game insights like blunders, brilliant moves, and overall evaluation.
+<img width="879" alt="example_auto_analyzer" src="https://github.com/user-attachments/assets/c5d32e12-b6a1-4c77-99ba-7ce7ae734cd6">
+
 
 ### Requirements:
 - **Stockfish Installed**: Ensure Stockfish is available on your system, as it is integral for providing accurate game analysis.
