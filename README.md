@@ -1,0 +1,1 @@
+# lichess-auto-analyzer
