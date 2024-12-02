@@ -5,7 +5,6 @@ import subprocess
 import re
 from datetime import datetime
 
-
 def download_all_games(username, output_file):
     url = f'https://lichess.org/api/games/user/{username}?tags=true&clocks=false&evals=false&opening=true&literate=false'
     response = requests.get(url, stream=True)
@@ -136,11 +135,11 @@ def analyze_game(game, engine_path, annotated_file, is_batch=False):
         except (ValueError, IOError) as e:
             print(f"Error writing annotated PGN file: {e}")
         
-        # Define the file path using the UTC date and time
+        # file path using UTC date and time
         file_path = f'annotated/raw_{annotated_file}.pgn'
         os.rename(temp_pgn_path, file_path)
 
-    # Always clean up the temporary PGN file
+    # clean up the temporary PGN file
     if os.path.exists(temp_pgn_path):
         os.remove(temp_pgn_path)
 
@@ -149,8 +148,8 @@ def main():
     username = input("Enter Lichess user: ").strip() or '' # add your username here if you want
     games_file = f'games/{username}_all_games.pgn'
     annotated_file = f'{username}_annotated.pgn'
-    engine_path = "/home/dstrand/workspace/chess/stockfish/stockfish-ubuntu-x86-64"
-    games_batch = 20 # how many games to display
+    engine_path = "" # put your stockfish enghine path here
+    games_batch = 20 # how many games to display in the menu
 
     if not os.path.exists(games_file):
         download_all_games(username, games_file)
@@ -175,7 +174,6 @@ def main():
 
             # Ask the user which game to analyze or whether they want more games or auto-import [MENU]
             game_choice = input(f"\nChoose a game to analyze (1-{games_batch}), (c)heck for new games, see the (n)ext {games_batch} games, or (a)uto analyze some games: ")
-
 
             if game_choice.lower() == 'n':
                 # Skip to the next set of games
@@ -233,7 +231,6 @@ def main():
                         print("Invalid choice. Please enter a number between 1 and {games_batch}.")
                 except ValueError:
                     print("Invalid input. Please enter a number between 1 and {games_batch}, 'n', or 'a'.")
-
 
 if __name__ == "__main__":
     main()
