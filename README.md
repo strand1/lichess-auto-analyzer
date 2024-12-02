@@ -1,44 +1,47 @@
-## Lichess Auto Analyzer 
+## Lichess Auto Analyzer
 
-This script is designed to download and analyze chess games from [Lichess](https://lichess.org). It allows users to pull all their Lichess games, analyze selected ones, and automatically annotate them using `rpdelaney-archive/python-chess-annotator`.
+This script downloads and analyzes chess games from [Lichess](https://lichess.org), allowing users to retrieve their games, analyze selected ones, and automatically annotate them using [`python-chess-annotator`](https://github.com/rpdelaney-archive/python-chess-annotator).
 
-### What It Does:
-- **Download Games:** Retrieves your games from Lichess using their public API, storing them in a `.pgn` file for easy reference.
-- **Analyze and Annotate:** Uses Stockfish (a powerful chess engine) and the `rpdelaney-archive/python-chess-annotator` to generate detailed annotations for each selected game.
-- **User Interaction:** Manually select games to analyze, Automatically analyze multiple games, and Check for recent games.
-- **Save Annotated Games:** Annotated games are saved locally.
+### Features
 
-### Key Features:
-1. **Interactive Selection:** Users can choose which games they want to analyze from a list of recent games.
-2. **Batch Analysis:** An option to automate the analysis of multiple games, perfect for users with large game histories.
-3. **Detailed Game Annotation:** Each game is annotated with comments for inaccuracies, mistakes, and blunders. 
+- **Download Games:** Retrieve your Lichess games via their public API and store them in a `.pgn` file.
+- **Analyze and Annotate:** Utilize Stockfish and `python-chess-annotator` to generate detailed annotations for selected games.
+- **User Interaction:**
+  - Manually select games to analyze.
+  - Automatically analyze multiple games.
+  - Check for recent games.
+- **Save Annotated Games:** Save annotated games locally.
 
-### Dependencies:
-- **Stockfish**: A chess engine that must be installed on your system for game analysis.
-- **Python Chess Annotator**: Utilizes `rpdelaney-archive/python-chess-annotator` for adding annotations to your games.
+### Dependencies
 
-### How to Use:
-1. **Run the Script**: When you run the script, you'll be prompted to input your Lichess username.
-2. **Choose Your Action**:
-   - The user's complete game history will be downloaded locally.
-   - Select recent games to analyze from the list provided.
-   - Or, choose batch analysis if you'd like to annotate multiple games at once.
-   - Also, you can check for any newly played games and add them to your local collection.
-   - View the annotated files in your local `annotated` directory to see game insights
-3. **Annotations**: The script uses Stockfish and the annotator tool to evaluate and comment on the games, saving the annotated `.pgn` files locally for review.
+- **Stockfish:** A chess engine required for game analysis.
+- **Python Chess Annotator:** Leverages [`python-chess-annotator`](https://github.com/rpdelaney-archive/python-chess-annotator) for adding annotations to your games.### How to Use
 
-<img width="879" alt="example_auto_analyzer" src="https://github.com/user-attachments/assets/c5d32e12-b6a1-4c77-99ba-7ce7ae734cd6">
+1. **Run the Script**: Start the script and input your Lichess username when prompted.
+2. **Choose an Action**:
+   - Download your complete game history locally.
+   - Select recent games to analyze from a provided list.
+   - Perform batch analysis to annotate multiple games at once.
+   - Check for newly played games and add them to your local collection.
+   - View annotated files in the `annotated` directory for detailed insights.
+3. **Annotations**: The script uses Stockfish and `python-chess-annotator` to evaluate and comment on games, saving annotated `.pgn` files locally.
 
+![Example Auto Analyzer](https://github.com/user-attachments/assets/c5d32e12-b6a1-4c77-99ba-7ce7ae734cd6)
 
-### Requirements:
-- **Stockfish Installed**: Ensure Stockfish is available on your system, as it is integral for providing accurate game analysis.
-- **Python Environment**: This script runs with Python 3, and all required Python modules should be installed beforehand.
+### Requirements
 
-### Notes:
-- **Annotated Files**: The annotated games are saved in `.pgn` format in a local directory called `annotated`. You'll also get separate annotations for individual games for easy reference.
+- **Stockfish Installed**: Stockfish must be installed on your system for accurate analysis.
+- **Python Environment**: Requires Python 3 and the necessary Python modules installed.
 
-### TODO: Will update with further pgn processing, to allow annotated games to integrate with langchain for llm interaction. 
+### Notes
 
-This script makes chess analysis both fun and insightful, helping you learn from your games and track your progress as a player.
+- **Annotated Files**: Annotated games are saved as `.pgn` files in a local `annotated` directory, with separate annotations for individual games.
+
+### TODO: 
+- Download options (past month, past week...)
+- Sort games (opening, color, wins/losses, variant, etc)
+- Parse script for further pgn processing, to allow annotated games to integrate with langchain for llm interaction. 
+
+*Bring clarity to your game, reveal patterns, and unlock deeper lines*
 
 
