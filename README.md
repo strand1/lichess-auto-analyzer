@@ -14,8 +14,8 @@ This script downloads and analyzes chess games from [Lichess](https://lichess.or
 
 ### Dependencies
 
-- **[Stockfish](https://stockfishchess.org/)
-- **[`Python Chess Annotator`](https://github.com/rpdelaney-archive/python-chess-annotator) 
+- [Stockfish](https://stockfishchess.org/)
+- [`Python Chess Annotator`](https://github.com/rpdelaney-archive/python-chess-annotator) 
 
 ### Use
  **Run the Script**: Start the script and input a Lichess username to download games
@@ -25,9 +25,7 @@ This script downloads and analyzes chess games from [Lichess](https://lichess.or
    - Check for newly played games and add them to your local collection
    - View annotated files in the `annotated` directory for detailed insights
 
-
 ![Example Auto Analyzer](https://github.com/user-attachments/assets/c5d32e12-b6a1-4c77-99ba-7ce7ae734cd6)
-
 ### TODO: 
 - Download options (past month, past week...)
 - Sort games (opening, color, wins/losses, variant, etc)
